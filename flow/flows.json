@@ -1,0 +1,399 @@
+[
+    {
+        "id": "b1a5d2894a8a052d",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b5dd0a880760a102",
+        "type": "mqtt in",
+        "z": "b1a5d2894a8a052d",
+        "name": "RFID",
+        "topic": "kdjk/rfid",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0418a93309c56a1a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 320,
+        "wires": [
+            [
+                "51d7684ebc465cbf",
+                "64ad6c195d1ffee3"
+            ]
+        ]
+    },
+    {
+        "id": "51d7684ebc465cbf",
+        "type": "debug",
+        "z": "b1a5d2894a8a052d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "64ad6c195d1ffee3",
+        "type": "function",
+        "z": "b1a5d2894a8a052d",
+        "name": "Akses Masuk",
+        "func": "var database = {\n    \"a36cfbb6\": \"Sucahya\",\n    \"04B2345678\": \"Jane Smith\"\n};\n\nvar rfid_code = msg.payload;  \nvar nama = database[rfid_code]; \n\nif (nama) {\n    msg.payload = {\n        status: \"success\",\n        message: \"Kamu keren! </br>\",  \n        name: nama,\n        lamp: \"hijau\"\n    };\n    msg.lamp_status = \"hijau\";\n    msg.mqtt_message = {\n        status: \"access_granted\",\n        name: nama\n    };\n} else {\n    msg.payload = {\n        status: \"failed\",\n        message: \"Dilarang masuk\",\n        lamp: \"merah\",\n        name: \"error\",\n    };\n    msg.lamp_status = \"merah\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 260,
+        "wires": [
+            [
+                "33aecdc073722b72",
+                "d052f9d30c8b507f",
+                "8db46a79e7dc9a00",
+                "661e57472e80d247"
+            ]
+        ]
+    },
+    {
+        "id": "33aecdc073722b72",
+        "type": "ui_template",
+        "z": "b1a5d2894a8a052d",
+        "group": "b6324e9061536d18",
+        "name": "",
+        "order": 1,
+        "width": "12",
+        "height": "13",
+        "format": "<div id=\"status\"\n    style=\"display: flex; justify-content: center; height: 100vh; align-items: center; flex-direction: column; text-align: center;\">\n    <h1 style=\"font-size: 40px; margin-bottom: 40px;\">Selamat Datang di Perpustakaan</h1> <!-- Judul di atas -->\n    <div id=\"circle\" style=\"width: 300px; height: 300px; border-radius: 50%; background-color: grey;\"></div>\n    <p id=\"message\" style=\"font-size: 30px; margin-top: 30px;\"></p>\n    <p id=\"name\" style=\"font-size: 30px; margin-top: 1px; color: black;\"></p>\n</div>\n<script>\n    (function(scope) {\n        scope.$watch('msg', function(msg) {\n            var circle = document.getElementById('circle');\n            var message = document.getElementById('message');\n            var nameElement = document.getElementById('name');\n            if (msg.lamp_status === \"hijau\") {\n                circle.style.backgroundColor = 'green';\n                message.innerHTML = msg.payload.message;\n                nameElement.innerHTML = msg.payload.name;\n            } else if (msg.lamp_status === \"merah\") {\n                circle.style.backgroundColor = 'red';\n                message.innerHTML = msg.payload.message;\n                nameElement.innerHTML = 'Tidak Dikenal';\n            } else {\n                circle.style.backgroundColor = 'grey';\n                message.innerHTML = 'Status Akses';\n                nameElement.innerHTML = '---';\n            }\n        });\n    })(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1140,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d052f9d30c8b507f",
+        "type": "delay",
+        "z": "b1a5d2894a8a052d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 740,
+        "y": 200,
+        "wires": [
+            [
+                "6da5ee4cf1801d3a"
+            ]
+        ]
+    },
+    {
+        "id": "6da5ee4cf1801d3a",
+        "type": "change",
+        "z": "b1a5d2894a8a052d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lamp_status",
+                "pt": "msg",
+                "to": "grey",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 200,
+        "wires": [
+            [
+                "33aecdc073722b72"
+            ]
+        ]
+    },
+    {
+        "id": "adbfbf0491b70a85",
+        "type": "mqtt out",
+        "z": "b1a5d2894a8a052d",
+        "name": "Ke ESP",
+        "topic": "kdjk/led",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0418a93309c56a1a",
+        "x": 940,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8db46a79e7dc9a00",
+        "type": "change",
+        "z": "b1a5d2894a8a052d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.lamp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 320,
+        "wires": [
+            [
+                "adbfbf0491b70a85",
+                "a4c95abb10c30593"
+            ]
+        ]
+    },
+    {
+        "id": "a4c95abb10c30593",
+        "type": "debug",
+        "z": "b1a5d2894a8a052d",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "661e57472e80d247",
+        "type": "change",
+        "z": "b1a5d2894a8a052d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 420,
+        "wires": [
+            [
+                "33cebb78c67d4f35",
+                "2a86efa418b891f9"
+            ]
+        ]
+    },
+    {
+        "id": "33cebb78c67d4f35",
+        "type": "mqtt out",
+        "z": "b1a5d2894a8a052d",
+        "name": "",
+        "topic": "kdjk/nama",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0418a93309c56a1a",
+        "x": 950,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "2a86efa418b891f9",
+        "type": "debug",
+        "z": "b1a5d2894a8a052d",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d8a7616c5cb171bf",
+        "type": "mqtt in",
+        "z": "b1a5d2894a8a052d",
+        "name": "",
+        "topic": "kdjk/suhu",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0418a93309c56a1a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 680,
+        "wires": [
+            [
+                "4174fdac95a6ad6e",
+                "c4f0bfcc5589cfb2"
+            ]
+        ]
+    },
+    {
+        "id": "4174fdac95a6ad6e",
+        "type": "ui_gauge",
+        "z": "b1a5d2894a8a052d",
+        "name": "",
+        "group": "520e7bbcee3e3810",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Suhu Ruangan",
+        "label": "Celcius",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 740,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "c4f0bfcc5589cfb2",
+        "type": "debug",
+        "z": "b1a5d2894a8a052d",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "0418a93309c56a1a",
+        "type": "mqtt-broker",
+        "name": "ESP32",
+        "broker": "192.168.1.101",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "70",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b6324e9061536d18",
+        "type": "ui_group",
+        "name": "Akses Masuk",
+        "tab": "c705877f5d315f80",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "520e7bbcee3e3810",
+        "type": "ui_group",
+        "name": "Suhu",
+        "tab": "c705877f5d315f80",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c705877f5d315f80",
+        "type": "ui_tab",
+        "name": "Halaman 2",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
