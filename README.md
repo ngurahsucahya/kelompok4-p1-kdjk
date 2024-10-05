@@ -6,6 +6,7 @@
 | Nama                                      | NIM          |
 |-------------------------------------------|--------------|
 | [I Gusti Ngurah Sucahya Satria Adi Pratama](https://github.com/ngurahsucahya)| G6401221031  |
+| [Hamdan Arif Darojat](https://github.com/hmdanna)| G6401221063  |
 |                        |   |
 |                          |  |
 
