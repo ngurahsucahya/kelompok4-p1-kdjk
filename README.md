@@ -1,4 +1,6 @@
 # Kelompok 4 (P1) - Node RED
+![hasil1.png](images/hasil1.png)
+![hasil2.png](images/hasil2.png)
 
 # Anggota Tim
 | Nama                                      | NIM          |
@@ -58,7 +60,7 @@ sudo systemctl stop mosquitto
 ```
 sudo npm install -g --unsafe-perm node-red
 ```
-![nodered1.png](images/nodered1.png)</br>
+![nodered1.png](images/nodered1.png)
 
 ### Setup MQTT ESP32
 </details>
@@ -88,7 +90,7 @@ Sehingga muncul tampilan seperti ini</br>
 Jangan lupa jalankan Node RED.</br>
 Sekarang server sudah berjalan melalui Raspberry Pi 4. Server akan tetap hidup selama Raspberry Pi 4 juga menyala. 
 </details>
-</br>
+
 
 # Maintenance
 <details>
