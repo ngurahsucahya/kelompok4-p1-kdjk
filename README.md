@@ -10,7 +10,6 @@
 # Sekilas Tentang
 <details>
 </details>
-</br>
 
 # Instalasi
 <details>
@@ -61,10 +60,8 @@ sudo npm install -g --unsafe-perm node-red
 ```
 ![nodered1.png](images/nodered1.png)</br>
 
-</details>
-</br>
-
 ### Setup MQTT ESP32
+</details>
 
 # Konfigurasi
 <details>
@@ -96,7 +93,6 @@ Sekarang server sudah berjalan melalui Raspberry Pi 4. Server akan tetap hidup s
 # Maintenance
 <details>
 </details>
-</br>
 
 # Cara Pemakaian
 <details>
@@ -127,14 +123,11 @@ Setelah server Node RED berjalan dan browser terbuka, maka tulis http://127.0.0.
 ### Memulai projek
 
 </details>
-</br>
 
 # Pembahasan
 <details>
 </details>
-</br>
 
 # Referensi
 <details>
 </details>
-</br>
