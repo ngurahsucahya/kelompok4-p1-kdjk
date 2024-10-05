@@ -2,7 +2,7 @@
     {
         "id": "b1a5d2894a8a052d",
         "type": "tab",
-        "label": "Flow 2",
+        "label": "Kelompok 4",
         "disabled": false,
         "info": "",
         "env": []
@@ -51,7 +51,7 @@
         "type": "function",
         "z": "b1a5d2894a8a052d",
         "name": "Akses Masuk",
-        "func": "var database = {\n    \"a36cfbb6\": \"Sucahya\",\n    \"04B2345678\": \"Jane Smith\"\n};\n\nvar rfid_code = msg.payload;  \nvar nama = database[rfid_code]; \n\nif (nama) {\n    msg.payload = {\n        status: \"success\",\n        message: \"Kamu keren! </br>\",  \n        name: nama,\n        lamp: \"hijau\"\n    };\n    msg.lamp_status = \"hijau\";\n    msg.mqtt_message = {\n        status: \"access_granted\",\n        name: nama\n    };\n} else {\n    msg.payload = {\n        status: \"failed\",\n        message: \"Dilarang masuk\",\n        lamp: \"merah\",\n        name: \"error\",\n    };\n    msg.lamp_status = \"merah\";\n}\n\nreturn msg;\n",
+        "func": "var database = {\n    \"a36cfbb6\": \"Sucahya\",\n    \"010101\": \"Hamdan\",\n    \"1234\": \"Bima\"\n};\n\nvar rfid_code = msg.payload;  \nvar nama = database[rfid_code]; \n\nif (nama) {\n    msg.payload = {\n        status: \"success\",\n        message: \"Kamu keren! </br>\",  \n        name: nama,\n        lamp: \"hijau\"\n    };\n    msg.lamp_status = \"hijau\";\n    msg.mqtt_message = {\n        status: \"access_granted\",\n        name: nama\n    };\n} else {\n    msg.payload = {\n        status: \"failed\",\n        message: \"Dilarang masuk\",\n        lamp: \"merah\",\n        name: \"error\",\n    };\n    msg.lamp_status = \"merah\";\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -282,7 +282,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 360,
-        "y": 680,
+        "y": 660,
         "wires": [
             [
                 "4174fdac95a6ad6e",
@@ -315,7 +315,7 @@
         "diff": false,
         "className": "",
         "x": 740,
-        "y": 680,
+        "y": 660,
         "wires": []
     },
     {
@@ -332,14 +332,81 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 540,
-        "y": 740,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "5afd30840ba18db1",
+        "type": "mqtt in",
+        "z": "b1a5d2894a8a052d",
+        "name": "",
+        "topic": "kdjk/kelembapan",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0418a93309c56a1a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 780,
+        "wires": [
+            [
+                "d2360a4def1a4795",
+                "1e9e076ef395ca49"
+            ]
+        ]
+    },
+    {
+        "id": "d2360a4def1a4795",
+        "type": "ui_gauge",
+        "z": "b1a5d2894a8a052d",
+        "name": "",
+        "group": "520e7bbcee3e3810",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Kelembapan Ruangan",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 760,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "1e9e076ef395ca49",
+        "type": "debug",
+        "z": "b1a5d2894a8a052d",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 840,
         "wires": []
     },
     {
         "id": "0418a93309c56a1a",
         "type": "mqtt-broker",
         "name": "ESP32",
-        "broker": "192.168.1.101",
+        "broker": "test.mosquitto.org",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -380,7 +447,7 @@
     {
         "id": "520e7bbcee3e3810",
         "type": "ui_group",
-        "name": "Suhu",
+        "name": "Suhu dan Kelembapan Ruangan",
         "tab": "c705877f5d315f80",
         "order": 1,
         "disp": true,
@@ -391,7 +458,7 @@
     {
         "id": "c705877f5d315f80",
         "type": "ui_tab",
-        "name": "Halaman 2",
+        "name": "Kelompok 4",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
