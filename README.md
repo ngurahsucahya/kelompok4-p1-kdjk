@@ -131,6 +131,7 @@ Setelah server Node RED berjalan dan browser terbuka, maka tulis http://127.0.0.
 # Pembahasan
 <details>
    Node-RED adalah platform pemrograman berbasis aliran (flow-based programming) yang ditulis dalam bahasa JavaScript dan berjalan pada runtime Node.js. Berikut adalah kelebihan-kelebihan Node-RED:
+   
 - Memiliki antarmuka visual drag-and-drop yang sangat intuitif untuk membuat aliran program
 - Mendukung berbagai protokol IoT seperti MQTT, HTTP, WebSocket, dan protokol industri lainnya
 - Memiliki dashboard yang mudah dikustomisasi untuk visualisasi data secara real-time
