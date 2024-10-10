@@ -7,7 +7,7 @@
 |-------------------------------------------|--------------|
 | [I Gusti Ngurah Sucahya Satria Adi Pratama](https://github.com/ngurahsucahya)| G6401221031  |
 | [Hamdan Arif Darojat](https://github.com/hmdanna)| G6401221063  |
-|                        |   |
+| [Elrica Meriana Isabel Tutu](https://github.com/ElricaMeriana)| X1004241068 |
 |                          |  |
 
 # Sekilas Tentang
@@ -130,6 +130,29 @@ Setelah server Node RED berjalan dan browser terbuka, maka tulis http://127.0.0.
 
 # Pembahasan
 <details>
+   Node-RED adalah platform pemrograman berbasis aliran (flow-based programming) yang ditulis dalam bahasa JavaScript dan berjalan pada runtime Node.js. Berikut adalah kelebihan-kelebihan Node-RED:
+- Memiliki antarmuka visual drag-and-drop yang sangat intuitif untuk membuat aliran program
+- Mendukung berbagai protokol IoT seperti MQTT, HTTP, WebSocket, dan protokol industri lainnya
+- Memiliki dashboard yang mudah dikustomisasi untuk visualisasi data secara real-time
+- Tersedia ribuan node tambahan dari komunitas yang dapat diinstall dengan mudah
+- Cocok untuk proyek IoT dan automasi karena ringan dan dapat berjalan di perangkat dengan resource terbatas
+- Komunitas yang aktif dan dokumentasi yang lengkap
+- Dapat diintegrasikan dengan berbagai platform dan layanan cloud
+   
+Beberapa kekurangan Node-RED antara lain:
+- Meskipun antarmuka visual memudahkan pemrograman, tapi bisa membatasi fleksibilitas untuk logic yang sangat kompleks
+- Performa bisa menurun ketika menangani aliran data yang sangat besar
+- Beberapa node premium atau enterprise tidak tersedia secara gratis
+- Membutuhkan pemahaman dasar JavaScript untuk fungsi-fungsi custom
+
+Jika dibandingkan dengan platform serupa seperti Grafana, Node-RED ini memiliki keunggulan dan kelemahannya sendiri. Berikut adalah beberapa perbandingan antara kedua CMS ini:
+- Node-RED lebih fokus pada pemrograman aliran dan automasi, sementara Grafana lebih spesialis untuk visualisasi dan monitoring
+- Dashboard Node-RED lebih sederhana tapi lebih mudah dikustomisasi, sedangkan Grafana memiliki fitur visualisasi yang jauh lebih kaya
+- Node-RED memiliki kemampuan pemrosesan dan transformasi data yang lebih baik
+Grafana lebih unggul dalam hal manajemen alert dan notifikasi
+- Node-RED lebih ringan dan mudah di-deploy di edge device
+Kurva pembelajaran Node-RED lebih landai untuk pemula dibanding Grafana
+
 </details>
 
 # Referensi
