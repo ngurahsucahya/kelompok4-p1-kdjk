@@ -144,8 +144,8 @@ Beberapa kekurangan Node-RED antara lain:
 - Meskipun antarmuka visual memudahkan pemrograman, tapi bisa membatasi fleksibilitas untuk logic yang sangat kompleks
 - Performa bisa menurun ketika menangani aliran data yang sangat besar
 - Node-RED merupakan platform open-source yang gratis, namun ketika diintegrasikan dengan layanan infrastruktur komputasi tertentu akan memerlukan biaya berlangganan dari penyedia layanan tersebut. Seingga biaya muncul dari penggunaan layanan pihak ketiga.  Beberapa contohnya:
-      - Jika menggunakan node untuk mengakses API dari layanan premium seperti IBM Watson, AWS Lambda, atau Microsoft Azure, maka layanan-layanan ini mungkin memerlukan langganan premium meskipun node di Node-RED gratis.
-      - Node yang memanfaatkan layanan cloud seperti Infura atau Alchemy untuk blockchain juga mungkin memerlukan akun premium di layanan tersebut.
+  - Jika menggunakan node untuk mengakses API dari layanan premium seperti IBM Watson, AWS Lambda, atau Microsoft Azure, maka layanan-layanan ini mungkin memerlukan langganan premium meskipun node di Node-RED gratis.
+  - Node yang memanfaatkan layanan cloud seperti Infura atau Alchemy untuk blockchain juga mungkin memerlukan akun premium di layanan tersebut.
 - Membutuhkan pemahaman dasar JavaScript untuk fungsi-fungsi custom
 
 Jika dibandingkan dengan platform serupa seperti Grafana, Node-RED ini memiliki keunggulan dan kelemahannya sendiri. Berikut adalah beberapa perbandingan antara kedua CMS ini:
