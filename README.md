@@ -97,6 +97,16 @@ Sekarang server sudah berjalan melalui Raspberry Pi 4. Server akan tetap hidup s
 
 # Maintenance
 <details>
+   
+Lakukan command `pm2 list` untuk mendapatkan semua process yang sedang berjalan
+
+<img width="556" alt="image" src="https://github.com/user-attachments/assets/35365eab-51d1-4b05-9dc9-f0aab939a2cb">
+
+Jika salah satu process offline, silahkan restart process tersebut dengan command `pm2 restart {id}` sesuaikan id dengan nama process yang offline
+
+<img width="554" alt="image" src="https://github.com/user-attachments/assets/07898365-100a-434d-9048-e670b8468494">
+
+Silahkan cek hal tersebut secara berkala, jika ingin automation restart server secara berkala dengan catatan bahwa server akan shutdown setiap jam silahkan gunakan `cron`
 </details>
 
 # Cara Pemakaian
