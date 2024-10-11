@@ -133,11 +133,11 @@ Flow adalah area kerja utama dalam Node-RED yang digunakan untuk menghubungkan n
    - Tab: Berfungsi untuk memisahkan flow ke dalam beberapa tab yang berbeda
    - Group: Digunakan untuk mengelompokkan node-node yang saling berkaitan
    - Label: Berfungsi untuk memberikan nama atau keterangan pada komponen
-4. Configuration
+4. Configuration </br>
 Untuk mengkonfigurasi nodes dan sistem. Beberapa pengaturan yang dapat dilakukan seperti saat mengatur payload, delay dan koneksi ESP, seperti saat mengatur payload, delay dan koneksi ESP.
-6. Debug
+6. Debug </br>
 Debug adalah fitur yang disediakan untuk memonitor jalannya program, mencari dan memperbaiki kesalahan yang terjadi.
-8. Plug-in
+8. Plug-in </br>
 Plug-in merupakan fitur ekstensi yang dapat ditambahkan untuk memperluas fungsionalitas Node-RED. Pengguna dapat menginstal berbagai plugin sesuai dengan kebutuhan untuk menambah kemampuan sistem.Ekstensi untuk menambah fungsi tambahan.
 
 ### Memulai projek
