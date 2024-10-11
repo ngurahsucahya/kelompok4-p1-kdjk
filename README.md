@@ -127,13 +127,18 @@ Setelah server Node RED berjalan dan browser terbuka, maka tulis http://127.0.0.
 
 ### Pengenalan fitur
 1. Node
-2. Flow </br>
-   - Tab
-   - Group
-   - Label
-3. Configuration
-4. Debug
-5. Plug-in
+   Node merupakan komponen dasar dalam Node-RED. Setiap node dapat dikoneksikan dengan node lain untuk membentuk alur kerja. Contoh node pada aplikasi Node-RED ini yaitu node RFID, node delay, node debug, node template dan lain-lain.
+3. Flow </br>
+Flow adalah area kerja utama dalam Node-RED yang digunakan untuk menghubungkan node-node sehingga membentuk suatu alur program.
+   - Tab: Berfungsi untuk memisahkan flow ke dalam beberapa tab yang berbeda
+   - Group: Digunakan untuk mengelompokkan node-node yang saling berkaitan
+   - Label: Berfungsi untuk memberikan nama atau keterangan pada komponen
+4. Configuration
+   Untuk mengkonfigurasi nodes dan sistem. Beberapa pengaturan yang dapat dilakukan seperti saat mengatur payload, delay dan koneksi ESP, seperti saat mengatur payload, delay dan koneksi ESP.
+6. Debug
+   Debug adalah fitur yang disediakan untuk memonitor jalannya program, mencari dan memperbaiki kesalahan yang terjadi.
+8. Plug-in
+   Plug-in merupakan fitur ekstensi yang dapat ditambahkan untuk memperluas fungsionalitas Node-RED. Pengguna dapat menginstal berbagai plugin sesuai dengan kebutuhan untuk menambah kemampuan sistem.Ekstensi untuk menambah fungsi tambahan.
 
 ### Memulai projek
 
