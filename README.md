@@ -126,7 +126,7 @@ Setelah server Node RED berjalan dan browser terbuka, maka tulis http://127.0.0.
 ![nodered4.png](images/nodered4.png)</br>
 
 ### Pengenalan fitur
-1. Node
+1. Node </br>
 Node merupakan komponen dasar dalam Node-RED. Setiap node dapat dikoneksikan dengan node lain untuk membentuk alur kerja. Contoh node pada aplikasi Node-RED ini yaitu node RFID, node delay, node debug, node template dan lain-lain.
 3. Flow </br>
 Flow adalah area kerja utama dalam Node-RED yang digunakan untuk menghubungkan node-node sehingga membentuk suatu alur program.
