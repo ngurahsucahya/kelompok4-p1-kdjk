@@ -8,6 +8,7 @@
 | [I Gusti Ngurah Sucahya Satria Adi Pratama](https://github.com/ngurahsucahya)| G6401221031  |
 | [Hamdan Arif Darojat](https://github.com/hmdanna)| G6401221063  |
 | [Elrica Meriana Isabel Tutu](https://github.com/ElricaMeriana)| X1004241068 |
+| [Harits Helmi Nabhan](https://github.com/haritsnabhan)| G6401221062  |
 |                          |  |
 
 # Sekilas Tentang
