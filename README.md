@@ -70,6 +70,8 @@ sudo npm install -g --unsafe-perm node-red
 
 # Konfigurasi
 <details>
+   
+## Opsi 1
 
 Kita akan menjadikan Raspberry Pi 4 sebagai server. Jadi kita perlu mendaftar dan menginstall localtonet.
 ### Melakukan registrasi pada localtonet.com
@@ -92,6 +94,38 @@ Sehingga muncul tampilan seperti ini</br>
 ![localtonet1.png](images/localtonet1.png)</br>
 Jangan lupa jalankan Node RED.</br>
 Sekarang server sudah berjalan melalui Raspberry Pi 4. Server akan tetap hidup selama Raspberry Pi 4 juga menyala. 
+
+## Opsi 2
+
+Kita akan setup vps untuk mengubah security web dari http menjadi https dengan memasang sertifikat ssl.
+### Melakukan revese proxy
+1. Buat file dengan nama bebas di /etc/nginx/sites-available, kali ini kami menggunakan nama file kelompok4p1.mpkmb.com.
+2. Tambahkan kode berikut untuk setup dengan port 1880 pada domain kelompok4p1.mpkmb.com. </br>
+```
+server {
+    listen 80;
+    server_name kelompok4p1.mpkmb.com;
+
+    location / {
+        proxy_pass http://localhost:1880;
+    }
+}
+```
+3. Lakukan command berikut untuk membuat symbolik link sehingga file yang berada di sites-enabled akan mengikut setiap perubahan yang terjadi di sites-available </br>
+`sudo ln -s /etc/nginx/sites-available/kelompok4p1.mpkmb.com /etc/nginx/sites-enabled/` </br>
+5. Symbolik link dari sites-available ke sites-enabled berhasil dibuat.</br>
+<img width="258" alt="image" src="https://github.com/user-attachments/assets/d3ce7ca2-925b-4318-bf07-1fa067c6bcba"> </br>
+6. Lakukan command berikut untuk membuat ssl </br>
+`sudo certbot --nginx -d kelompok4p1.mpkmb.com` </br>
+7. Ketik 2 agar semua request secure </br>
+<img width="556" alt="image" src="https://github.com/user-attachments/assets/e9d93fa7-d200-4713-9b28-4b9877822d0c"> </br>
+8. Ssl sertifikat berhasil dibuat sehingga sekarang web sudah https </br>
+<img width="602" alt="image" src="https://github.com/user-attachments/assets/f4554307-7724-402e-adb4-b7a1efa03ee4"> </br>
+9. Lakukan command berikut untuk restart nginx </br>
+`sudo systemctl reload nginx` </br>
+10. Lakukan command `pm2 start packages/node_modules/node-red/red.js` untuk menjalankan program. </br>
+<img width="974" alt="image" src="https://github.com/user-attachments/assets/3b6208a3-b856-4219-a8f4-4ea365145d69"> </br>
+Sekarang server sudah berjalan melalui VPS. Server akan selalu hidup. 
 </details>
 
 
