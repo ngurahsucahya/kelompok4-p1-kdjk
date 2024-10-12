@@ -176,5 +176,4 @@ Kurva pembelajaran Node-RED lebih landai untuk pemula dibanding Grafana
 
 # Referensi
 <details>
-   .[About Node-RED](https://nodered.org/).
 </details>
