@@ -3,13 +3,14 @@
 ![hasil2.png](images/hasil2.png)
 
 # Anggota Tim
-| Nama                                      | NIM          |
-|-------------------------------------------|--------------|
-| [I Gusti Ngurah Sucahya Satria Adi Pratama](https://github.com/ngurahsucahya)| G6401221031  |
-| [Harits Helmi Nabhan](https://github.com/haritsnabhan)| G6401221062  |
-| [Hamdan Arif Darojat](https://github.com/hmdanna)| G6401221063  |
-| [Elrica Meriana Isabel Tutu](https://github.com/ElricaMeriana)| X1004241068 |
-| [Bima Rizqy Ramadhan](https://github.com/bimaskuy)| G6401221082  |
+| Nama                                      | NIM          | Foto Profil |
+|-------------------------------------------|--------------|-------------|
+| [I Gusti Ngurah Sucahya Satria Adi Pratama](https://github.com/ngurahsucahya) | G6401221031  | ![Foto Profil](https://github.com/ngurahsucahya.png) |
+| [Harits Helmi Nabhan](https://github.com/haritsnabhan) | G6401221062  | ![Foto Profil](https://github.com/haritsnabhan.png) |
+| [Hamdan Arif Darojat](https://github.com/hmdanna) | G6401221063  | ![Foto Profil](https://github.com/hmdanna.png) |
+| [Elrica Meriana Isabel Tutu](https://github.com/ElricaMeriana) | X1004241068 | ![Foto Profil](https://github.com/ElricaMeriana.png) |
+| [Bima Rizqy Ramadhan](https://github.com/bimaskuy) | G6401221082  | ![Foto Profil](https://github.com/bimaskuy.png) |
+
 
 # Sekilas Tentang
 <details>
@@ -22,7 +23,7 @@
 ### Alat dan Spesifikasi
 1. Raspberry Pi 4 Model B
 2. Rangkaian RFID menggunakan ESP32 Board seperti pada gambar di bawah</br>
-![rangkaian.png](rangkaian.png)
+![rangkaian.png](images/rangkaian.jpg)
 3. Ubuntu 24
 4. Raspberry OS 
 
@@ -175,6 +176,15 @@ Debug adalah fitur yang disediakan untuk memonitor jalannya program, mencari dan
 Plug-in merupakan fitur ekstensi yang dapat ditambahkan untuk memperluas fungsionalitas Node-RED. Pengguna dapat menginstal berbagai plugin sesuai dengan kebutuhan untuk menambah kemampuan sistem.Ekstensi untuk menambah fungsi tambahan.
 
 ### Memulai projek
+1. Mengatur koneksi MQTT yang masuk
+![koneksimqtt.png](images/menghubungkanmqtt.png)</br>
+2. Mengatur input MQTT yang masuk (Subscribe)
+![koneksimqtt.png](images/menanganipesan.png)</br>
+3. Download plug-in sebagai tampilan user interface
+![koneksimqtt.png](images/downloadplugin.png)</br>
+4. Mengatur tampilan output menggunakan sedikit Javascript
+![mengaturtampilan1.png](images/mengaturtampilan1.png)</br>
+![mengaturtampilan2.png](images/mengaturtampilan2.png)</br>
 
 </details>
 
@@ -206,6 +216,25 @@ Grafana lebih unggul dalam hal manajemen alert dan notifikasi
 - Node-RED lebih ringan dan mudah di-deploy di edge device
 Kurva pembelajaran Node-RED lebih landai untuk pemula dibanding Grafana
 
+</details>
+
+# Hasil
+<details>
+
+## Halaman Node Flow
+![hasi3.png](images/hasil3.png)</br>
+## Halaman User Interface
+![hasil4.png](images/hasil4.png)</br>
+## Halaman Node Flow (Pengujung Boleh Masuk)
+![hasil5.png](images/hasil5.png)</br>
+## Halaman Node Flow (Pengunjung Dilarang Masuk)
+![hasil6.png](images/hasil6.png)</br>
+</details>
+
+# Dokumentasi
+<details>
+
+![dokumentasi1.png](images/Dokumentasi1.jpg)</br>
 </details>
 
 # Referensi
