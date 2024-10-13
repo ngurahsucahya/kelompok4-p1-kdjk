@@ -8,11 +8,12 @@
 # Anggota Tim
 | Nama                                      | NIM          | Foto Profil |
 |-------------------------------------------|--------------|-------------|
-| [I Gusti Ngurah Sucahya Satria Adi Pratama](https://github.com/ngurahsucahya) | G6401221031  | ![Foto Profil](https://github.com/ngurahsucahya.png) |
-| [Harits Helmi Nabhan](https://github.com/haritsnabhan) | G6401221062  | ![Foto Profil](https://github.com/haritsnabhan.png) |
-| [Hamdan Arif Darojat](https://github.com/hmdanna) | G6401221063  | ![Foto Profil](https://github.com/hmdanna.png) |
-| [Elrica Meriana Isabel Tutu](https://github.com/ElricaMeriana) | X1004241068 | ![Foto Profil](https://github.com/ElricaMeriana.png) |
-| [Bima Rizqy Ramadhan](https://github.com/bimaskuy) | G6401221082  | ![Foto Profil](https://github.com/bimaskuy.png) |
+| [I Gusti Ngurah Sucahya Satria Adi Pratama](https://github.com/ngurahsucahya) | G6401221031  | <img src="https://github.com/ngurahsucahya.png" width="100"> |
+| [Harits Helmi Nabhan](https://github.com/haritsnabhan) | G6401221062  | <img src="https://github.com/haritsnabhan.png" width="100"> |
+| [Hamdan Arif Darojat](https://github.com/hmdannarif) | G6401221063  | <img src="https://github.com/hmdannarif.png" width="100"> |
+| [Elrica Meriana Isabel Tutu](https://github.com/ElricaMeriana) | X1004241068 | <img src="https://github.com/ElricaMeriana.png" width="100"> |
+| [Bima Rizqy Ramadhan](https://github.com/bimaskuy) | G6401221082  | <img src="https://github.com/bimaskuy.png" width="100"> |
+
 
 
 # Sekilas Tentang
